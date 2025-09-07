@@ -1,2 +1,5 @@
-def run(name: str = "", lang: str = "en") -> None:
-    print(f"I should answer to {name} in {lang}")
+from kittsay import kitt_agent
+
+
+def run(name: str = "", lang: str = "English") -> None:
+    print(kitt_agent.run(name, lang))
