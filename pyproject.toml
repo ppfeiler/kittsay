@@ -8,6 +8,7 @@ license = "GPL-3.0-only"
 requires-python = ">=3.10"
 classifiers = []
 dependencies = [
+    "pycountry>=24.6.1",
     "python-dotenv>=1.1.1",
 ]
 
@@ -22,7 +23,7 @@ Issues = "https://github.com/ppfeiler/kittsay/issues"
 CI = "https://github.com/ppfeiler/kittsay/actions"
 
 [project.scripts]
-kittsay = "kittsay.app:run"
+kittsay = "kittsay.__main__:cli"
 
 [tool.uv]
 dev-dependencies = [
