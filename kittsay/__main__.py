@@ -1,4 +1,5 @@
 import argparse
+import os
 
 import pycountry
 
@@ -15,6 +16,13 @@ def parse_language(code: str) -> str:
     raise argparse.ArgumentTypeError(
         f"Ungültiger Sprachcode: {code}! Nur ISO 639-1 Sprachcodes sind erlaubt. Zum Beispiel: 'de', 'en'",
     )
+
+
+def validate_env():
+    if not os.getenv("OPENAI_API_KEY"):
+        raise argparse.ArgumentTypeError(
+            "Please set OPENAI_API_KEY environment variable",
+        )
 
 
 def cli():
@@ -37,6 +45,8 @@ def cli():
     )
 
     args = parser.parse_args()
+
+    validate_env()
 
     run(args.name, args.lang)
 
