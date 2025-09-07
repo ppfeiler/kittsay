@@ -2,7 +2,7 @@
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
-A python API / Command-line tool for communicating with KITT from the famous Knight Rider
+A python API / Command-line tool for communicating with KITT from the famous, original and life changing series Knight Rider.
 
 ## Installation
 

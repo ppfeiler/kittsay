@@ -1,7 +1,7 @@
 [project]
 name = "kittsay"
 version = "0.1"
-description = "A python API / Command-line tool for communicating with KITT from the famous Knight Rider"
+description = "A python API / Command-line tool for communicating with KITT from the famous, original and life changing series Knight Rider."
 readme = "README.md"
 authors = [{name = "Patrick Pfeiler"}]
 license = "GPL-3.0-only"
