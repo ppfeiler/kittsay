@@ -1,4 +1,5 @@
 import argparse
+import asyncio
 import os
 
 import pycountry
@@ -34,6 +35,7 @@ def cli():
     parser.add_argument(
         *["-n", "--name"],
         type=str,
+        default="Michael",
         help="Der Name, an den KITT spricht",
     )
     parser.add_argument(
@@ -48,7 +50,10 @@ def cli():
 
     validate_env()
 
-    run(args.name, args.lang)
+    try:
+        asyncio.run(run(args.name, args.lang))
+    except KeyboardInterrupt:
+        pass
 
 
 if __name__ == "__main__":

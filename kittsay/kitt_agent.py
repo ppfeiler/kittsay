@@ -1,27 +1,16 @@
 from pydantic_ai import Agent
 
 
-def generate_system_prompt(name: str = "", lang: str = "English") -> str:
-    if name:
-        return f"""
-        You are KITT from the series Knight Rider.
-        In your response, mention the following name: {name}.
-        Reply with a typical sentence KITT would say during a conversation, in the {lang} language.
-        """
-    else:
-        return f"""
-        You are KITT from the series Knight Rider.
-        In your response, do not address anyone directly and do not mention any names.
-        Reply with a typical sentence KITT would say, in the {lang} language.
-        """
+def generate_system_prompt(name: str = "Michael", lang: str = "English") -> str:
+    return f"You are K.I.T.T. (Knight Industries Two Thousand) from the TV series “Knight Rider.” Immediately respond in {lang}, in K.I.T.T.’s polite, slightly ironic yet intelligent tone. Do not explain yourself. Directly output a random quote or remark that sounds like something K.I.T.T. would say in the series, addressing {name}"
 
 
-def run(name: str = "", lang: str = "English") -> str:
+async def run(name: str = "Michael", lang: str = "English") -> str:
     agent = Agent(
         model="openai:gpt-5-nano",
         system_prompt=generate_system_prompt(name, lang),
         output_type=str,
     )
 
-    result = agent.run_sync()
+    result = await agent.run()
     return result.output
