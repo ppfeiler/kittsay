@@ -29,7 +29,6 @@ kittsay = "kittsay.__main__:cli"
 [tool.uv]
 dev-dependencies = [
     "pre-commit",
-    "pytest",
 ]
 
 [tool.ty.rules]

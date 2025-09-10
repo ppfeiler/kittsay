@@ -35,11 +35,6 @@ We use [uv](https://github.com/astral-sh/uv) for working with python projects.
 uv run kittsay
 ```
 
-To run the tests:
-```bash
-uv run pytest
-```
-
 ### pre-commit
 
 This project uses [pre-commit](https://pre-commit.com) for commit hooks. When working the first time with this project, run the following command to install pre-commit:
