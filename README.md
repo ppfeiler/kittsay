@@ -4,11 +4,18 @@
 
 A python API / Command-line tool for communicating with KITT from the famous, original and life changing series Knight Rider.
 
+![demo](docs/demo.gif)
+
 ## Installation
 
 The recommended way to install this tool is via [uv](https://github.com/astral-sh/uv):
 ```bash
-uv tool install git+ssh://github.com:ppfeiler/kittsay.git
+uv tool install https://github.com/ppfeiler/kittsay.git
+```
+
+Then simply run it:
+```bash
+kittsay
 ```
 
 ## Upgrading
